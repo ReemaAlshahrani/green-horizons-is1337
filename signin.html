@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sign In - Green Horizons</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header navigation bar -->
+    <header class="header">
+        <div class="nav-shell">
+            <a href="index.html" class="brand">
+                <div class="brand-logos">
+                    <img src="images/imamu.png" alt="Imam University Logo">
+                    <img src="images/Vision_2030.webp" alt="Saudi Vision 2030 Logo">
+                </div>
+                <span>GREEN HORIZONS</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Welcome</a>
+                <a href="sustainable.html">Sustainable Life</a>
+                <a href="survey.html">Survey</a>
+            </nav>
+            <div>
+                <a href="signin.html" style="color: #2d5a27; text-decoration: none; margin-right: 15px; font-weight: bold;">Sign in</a>
+                <a href="signup.html" class="primary-button">Sign up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="survey-page">
+        <!-- Signin container -->
+        <div class="auth-container">
+            <h2 style="color: #173f24; margin-top: 0;">Sign In</h2>
+            <p style="font-size: 13px; color: #555;">Log in with your username and password to access the survey.</p>
+
+            <form class="account-form" onsubmit="event.preventDefault(); location.href='survey.html';">
+                <label>Username 
+                    <input required type="text" placeholder="Your username">
+                </label>
+                <label>Password 
+                    <input required type="password" placeholder="Your password">
+                </label>
+                <button class="primary-button full" type="submit" style="margin-top: 10px;">Sign In</button>
+                <p style="text-align: center; margin-top: 10px; font-size: 12px;">
+                    New here? <a href="signup.html" style="color: #2d5a27; font-weight: bold;">Create a profile</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Site footer with social links and official logos -->
+    <footer>
+        <div class="footer-main">
+            <div>
+                <div class="brand" style="color: white; margin-bottom: 12px;">
+                    <div class="brand-logos">
+                        <img src="images/imamu.png" alt="Imam University Logo" style="height: 38px;">
+                    </div>
+                    <span>GREEN HORIZONS</span>
+                </div>
+                <p style="color: rgba(255,255,255,0.7); font-size: 13px; max-width: 280px; line-height: 1.5;">
+                    A student environmental awareness initiative by CCIS students at Imam Mohammad Ibn Saud Islamic University, aligned with the Saudi Green Initiative.
+                </p>
+            </div>
+
+            <div>
+                <b>EXPLORE</b>
+                <a href="index.html">Welcome</a>
+                <a href="sustainable.html">Sustainable Life</a>
+                <a href="survey.html">Green Survey</a>
+            </div>
+
+            <div>
+                <b>CONNECT & SOCIALS</b>
+                <span style="margin-bottom: 10px;">greenhorizons@imamu.edu.sa</span>
+                
+                <b style="margin-top: 15px; margin-bottom: 8px; font-size: 10px; color: #a3c293;">SAUDI GREEN INITIATIVE</b>
+                <div class="social-links-list">
+                    <a href="https://x.com/SgiSaudi" target="_blank" rel="noopener">X / Twitter (SGI)</a>
+                    <a href="https://www.linkedin.com/company/sgisaudi" target="_blank" rel="noopener">LinkedIn (SGI)</a>
+                    <a href="https://www.youtube.com/@SGISaudi" target="_blank" rel="noopener">YouTube (SGI)</a>
+                </div>
+
+                <b style="margin-top: 12px; margin-bottom: 8px; font-size: 10px; color: #a3c293;">IMSIU UNIVERSITY</b>
+                <div class="social-links-list">
+                    <a href="https://x.com/IMSIU_edu_sa?lang=ar" target="_blank" rel="noopener">X / Twitter (IMSIU)</a>
+                    <a href="https://www.linkedin.com/company/imsiu/?originalSubdomain=sa" target="_blank" rel="noopener">LinkedIn (IMSIU)</a>
+                </div>
+            </div>
+
+            <div style="text-align: right; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-start;">
+                <img src="images/Vision_2030.webp" alt="Saudi Vision 2030 Logo" style="height: 55px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; margin-bottom: 8px;">
+                <span style="font-size: 9px; letter-spacing: 1.5px; color: rgba(255,255,255,0.6); text-transform: uppercase;">
+                    SAUDI VISION 2030<br>KINGDOM OF SAUDI ARABIA
+                </span>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Green Horizons Project · Imam Mohammad Ibn Saud Islamic University</span>
+            <span>For our land. For our future.</span>
+        </div>
+    </footer>
+
+</body>
+</html>

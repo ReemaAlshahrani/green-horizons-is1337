@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Green Survey - Green Horizons</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header navigation bar -->
+    <header class="header">
+        <div class="nav-shell">
+            <a href="index.html" class="brand">
+                <div class="brand-logos">
+                    <img src="images/imamu.png" alt="Imam University Logo">
+                    <img src="images/Vision_2030.webp" alt="Saudi Vision 2030 Logo">
+                </div>
+                <span>GREEN HORIZONS</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Welcome</a>
+                <a href="sustainable.html">Sustainable Life</a>
+                <a href="survey.html" class="active">Survey</a>
+            </nav>
+            <div>
+                <a href="signin.html" style="color: #2d5a27; text-decoration: none; margin-right: 15px; font-weight: bold; font-size: 13px;">Sign in</a>
+                <a href="signup.html" class="primary-button">Sign up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="survey-page">
+
+        <!-- Survey page banner description -->
+        <div class="page-header-banner" style="text-align: center; margin-bottom: 30px;">
+            <div class="section-tag-line"><span>YOUR GREEN PLEDGE</span></div>
+            <h1 class="page-title-heading" style="font-size: 52px;">
+                Small habits.<br>
+                <em class="light-accent-text">Remarkable impact.</em>
+            </h1>
+            <p class="page-subtitle-text" style="max-width: 550px; margin: 0 auto;">
+                Tell us which sustainable practices are already part of your life—or which ones you're ready to begin.
+            </p>
+        </div>
+
+        <!-- Survey questionnaire form -->
+        <form class="survey-form" onsubmit="return checkSurvey(event);">
+            <h3 style="font-size: 15px; color: #2d5a27; border-bottom: 1px solid var(--line); padding-bottom: 5px; margin-top: 0;">Step 1: Environmental Topics</h3>
+            <div class="practice-grid">
+                <label class="practice"><input type="checkbox" name="topic" value="climate"> Climate change</label>
+                <label class="practice"><input type="checkbox" name="topic" value="wildlife"> Wildlife protection</label>
+                <label class="practice"><input type="checkbox" name="practice" value="marine"> Marine life</label>
+                <label class="practice"><input type="checkbox" name="practice" value="renewable"> Renewable energy</label>
+            </div>
+
+            <h3 style="font-size: 15px; color: #2d5a27; border-bottom: 1px solid var(--line); padding-bottom: 5px; margin-top: 20px;">Step 2: Sustainable Practices</h3>
+            <div class="practice-grid">
+                <label class="practice"><input type="checkbox" name="practice" value="water"> Conserve water</label>
+                <label class="practice"><input type="checkbox" name="practice" value="energy"> Save energy</label>
+                <label class="practice"><input type="checkbox" name="practice" value="recycle"> Sort & recycle</label>
+                <label class="practice"><input type="checkbox" name="practice" value="trees"> Plant native trees</label>
+            </div>
+
+            <h3 style="font-size: 15px; color: #2d5a27; border-bottom: 1px solid var(--line); padding-bottom: 5px; margin-top: 20px;">Step 3: Written Feedback</h3>
+            <label style="display: block; margin-top: 10px; font-size: 13px; font-weight: bold;">
+                Provide your written feedback:
+                <textarea id="feedback" placeholder="Write your thoughts here..." rows="4" required style="width: 100%; margin-top: 5px; box-sizing: border-box;"></textarea>
+            </label>
+
+            <div style="margin-top: 20px; text-align: right;">
+                <button class="primary-button" type="submit">Submit My Green Pledge</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Site footer with social links and official logos -->
+    <footer>
+        <div class="footer-main">
+            <div>
+                <div class="brand" style="color: white; margin-bottom: 12px;">
+                    <div class="brand-logos">
+                        <img src="images/imamu.png" alt="Imam University Logo" style="height: 38px;">
+                    </div>
+                    <span>GREEN HORIZONS</span>
+                </div>
+                <p style="color: rgba(255,255,255,0.7); font-size: 13px; max-width: 280px; line-height: 1.5;">
+                    A student environmental awareness initiative by CCIS students at Imam Mohammad Ibn Saud Islamic University, aligned with the Saudi Green Initiative.
+                </p>
+            </div>
+
+            <div>
+                <b>EXPLORE</b>
+                <a href="index.html">Welcome</a>
+                <a href="sustainable.html">Sustainable Life</a>
+                <a href="survey.html">Green Survey</a>
+            </div>
+
+            <div>
+                <b>CONNECT & SOCIALS</b>
+                <span style="margin-bottom: 10px;">greenhorizons@imamu.edu.sa</span>
+                
+                <b style="margin-top: 15px; margin-bottom: 8px; font-size: 10px; color: #a3c293;">SAUDI GREEN INITIATIVE</b>
+                <div class="social-links-list">
+                    <a href="https://x.com/SgiSaudi" target="_blank" rel="noopener">X / Twitter (SGI)</a>
+                    <a href="https://www.linkedin.com/company/sgisaudi" target="_blank" rel="noopener">LinkedIn (SGI)</a>
+                    <a href="https://www.youtube.com/@SGISaudi" target="_blank" rel="noopener">YouTube (SGI)</a>
+                </div>
+
+                <b style="margin-top: 12px; margin-bottom: 8px; font-size: 10px; color: #a3c293;">IMSIU UNIVERSITY</b>
+                <div class="social-links-list">
+                    <a href="https://x.com/IMSIU_edu_sa?lang=ar" target="_blank" rel="noopener">X / Twitter (IMSIU)</a>
+                    <a href="https://www.linkedin.com/company/imsiu/?originalSubdomain=sa" target="_blank" rel="noopener">LinkedIn (IMSIU)</a>
+                </div>
+            </div>
+
+            <div style="text-align: right; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-start;">
+                <img src="images/Vision_2030.webp" alt="Saudi Vision 2030 Logo" style="height: 55px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; margin-bottom: 8px;">
+                <span style="font-size: 9px; letter-spacing: 1.5px; color: rgba(255,255,255,0.6); text-transform: uppercase;">
+                    SAUDI VISION 2030<br>KINGDOM OF SAUDI ARABIA
+                </span>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Green Horizons Project · Imam Mohammad Ibn Saud Islamic University</span>
+            <span>For our land. For our future.</span>
+        </div>
+    </footer>
+
+    <script>
+        // Form validation script for survey submission
+        function checkSurvey(event) {
+            event.preventDefault();
+            var topics = document.querySelectorAll('input[name="topic"]:checked').length;
+            var practices = document.querySelectorAll('input[name="practice"]:checked').length;
+            if (topics === 0 || practices === 0) {
+                alert('Please select at least one topic and one practice.');
+                return false;
+            }
+            alert('Thank you for your green pledge!');
+            location.href = 'index.html';
+            return false;
+        }
+    </script>
+
+</body>
+</html>
