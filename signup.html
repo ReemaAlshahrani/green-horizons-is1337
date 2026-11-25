@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Sign Up - Green Horizons</title>
     <link rel="stylesheet" href="css/style.css">
+     <script src="js/signup.js"></script>
 </head>
 <body>
 
@@ -35,22 +36,22 @@
             <h2 style="color: #173f24; margin-top: 0;">Create Your Profile</h2>
             <p style="font-size: 13px; color: #555;">Fill in the form with your personal details and academic level.</p>
 
-            <form class="account-form" onsubmit="event.preventDefault(); alert('Profile created successfully!'); location.href='signin.html';">
+             <form id="signupForm" class="account-form">
                 <div class="field-row">
-                    <label>Full Name <input required type="text" placeholder="Your full name"></label>
-                    <label>Date of Birth <input required type="date"></label>
+                    <label>Full Name <input id="fullName" required type="text" placeholder="Your full name"></label>
+                    <label>Date of Birth <input id="dob" required type="date"></label>
                 </div>
 
                 <div class="field-row">
                     <label>Gender
-                        <select required>
+                        <select id="gender" required>
                             <option value="" disabled selected>Select</option>
                             <option>Female</option>
                             <option>Male</option>
                         </select>
                     </label>
                     <label>Academic Level
-                        <select required>
+                        <select id="academicLevel" required>
                             <option value="" disabled selected>Select</option>
                             <option>Undergraduate</option>
                             <option>Graduate</option>
@@ -59,9 +60,9 @@
                 </div>
 
                 <div class="field-row">
-                    <label>College <input required type="text" placeholder="e.g., CCIS"></label>
+                    <label>College <input id="college" required type="text" placeholder="e.g., CCIS"></label>
                     <label>Home City
-                        <select required>
+                        <select id="homeCity" required>
                             <option value="" disabled selected>Select city</option>
                             <option>Riyadh</option>
                             <option>Jeddah</option>
@@ -72,8 +73,16 @@
                 </div>
 
                 <div class="field-row">
-                    <label>Username <input required type="text" placeholder="Username"></label>
-                    <label>Password <input required type="password" minlength="8" placeholder="At least 8 chars"></label>
+                    <label>Username <input id="username" required type="text" placeholder="Username"></label>
+                    <label>Password <input id="password" required type="password" minlength="8" placeholder="At least 8 chars"></label>
+                </div>
+
+                 <div class="field-row">
+                    <label>Re-enter Password <input id="confirmPassword" required type="password" minlength="8" placeholder="Re-enter password"></label>
+                    <div style="display: flex; flex-direction: column; justify-content: center; font-size: 12px;">
+                        <span id="passwordFeedback" style="color: #555;">At least 8 chars, 1 uppercase, 1 number</span>
+                        <span id="confirmFeedback" style="margin-top: 4px;"></span>
+                    </div>
                 </div>
 
                 <fieldset style="border: 1px solid #ccc; padding: 10px; border-radius: 4px; margin-top: 5px;">
@@ -86,7 +95,22 @@
                     </div>
                 </fieldset>
 
-                <button class="primary-button full" type="submit" style="margin-top: 10px;">Create Profile</button>
+                 <fieldset style="border: 1px solid #ccc; padding: 10px; border-radius: 4px; margin-top: 8px;">
+                    <legend style="font-weight: bold; font-size: 12px; color: #2d5a27;">CAPTCHA Verification</legend>
+                    <div class="field-row" style="align-items: center;">
+                        <label style="margin: 0;">Captcha Code:
+                            <strong id="captchaCode" style="display: inline-block; padding: 6px 12px; background-color: #eef4ed; border: 1px solid #2d5a27; border-radius: 4px; letter-spacing: 3px; margin-left: 6px;"></strong>
+                        </label>
+                        <label style="margin: 0;">Enter Captcha
+                            <input id="captchaInput" required type="text" placeholder="Enter code shown">
+                        </label>
+                    </div>
+                </fieldset>
+
+                 <button id="signupBtn" class="primary-button full" type="submit" style="margin-top: 10px;">Create Profile</button>
+
+                 <div id="signupMessage" style="margin-top: 10px; font-size: 13px; font-weight: bold;"></div>
+
                 <p style="text-align: center; font-size: 12px; margin-top: 10px;">
                     Already a member? <a href="signin.html" style="color: #2d5a27; font-weight: bold;">Sign in</a>
                 </p>
@@ -143,7 +167,7 @@
         </div>
 
         <div class="footer-bottom">
-            <span>© 2026 Green Horizons Project · Imam Mohammad Ibn Saud Islamic University</span>
+            <span>©️ 2026 Green Horizons Project · Imam Mohammad Ibn Saud Islamic University</span>
             <span>For our land. For our future.</span>
         </div>
     </footer>
